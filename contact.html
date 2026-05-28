@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Florian DC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Florian DC - Accueil">
+      <span class="logo-init">F</span><span class="logo-dot">.</span>
+    </a>
+    <button id="burger" class="burger-btn" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+    </button>
+    <nav id="nav" class="main-nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+      <button id="nav-close" class="nav-close" aria-label="Fermer le menu">✕</button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <label class="theme-toggle" title="Changer le thème">
+      <input type="checkbox" id="themeToggle" aria-label="Activer le thème sombre">
+      <span class="toggle-track">
+        <span class="toggle-icon">☀️</span>
+        <span class="toggle-icon">🌙</span>
+        <span class="toggle-thumb"></span>
+      </span>
+    </label>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <ol>
+          <li><a href="index.html">Accueil</a></li>
+          <li aria-current="page">Contact</li>
+        </ol>
+      </nav>
+      <h1>Me <span class="accent">contacter</span></h1>
+      <p class="page-hero-desc">Une question, une idée de collaboration ? Je suis disponible.</p>
+    </div>
+
+    <section class="contact-section" aria-labelledby="t-contact">
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <h2 id="t-contact" class="sr-only">Informations de contact</h2>
+          <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <div>
+              <strong>Email</strong>
+              <p>decourtemancheflo@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong>Localisation</strong>
+              <p>Gourbeyre, Guadeloupe</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">🎓</div>
+            <div>
+              <strong>Formation</strong>
+              <p>BUT MMI — IUT Guadeloupe</p>
+            </div>
+          </div>
+          <div class="contact-deco" aria-hidden="true">
+            <div class="deco-circle deco-1"></div>
+            <div class="deco-circle deco-2"></div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <!--
+            FORMSPREE : Envoi d'email sans serveur.
+            Étapes :
+            1. Allez sur https://formspree.io et créez un compte gratuit
+            2. Créez un nouveau formulaire pour decourtemancheflo@gmail.com
+            3. Remplacez "YOUR_FORM_ID" ci-dessous par votre vrai ID Formspree (ex: xpwzqkbn)
+          -->
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            novalidate
+          >
+            <!-- Champ anti-spam (honeypot) -->
+            <input type="text" name="_gotcha" style="display:none">
+            <!-- Sujet du mail -->
+            <input type="hidden" name="_subject" value="Nouveau message depuis votre portfolio">
+
+            <div class="form-group">
+              <label for="nom">Nom complet</label>
+              <input
+                id="nom" name="nom"
+                type="text"
+                placeholder="Jean Dupont"
+                required
+                aria-invalid="false"
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Adresse email</label>
+              <input
+                id="email" name="email"
+                type="email"
+                placeholder="jean@exemple.fr"
+                required
+                aria-invalid="false"
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="sujet">Sujet</label>
+              <input
+                id="sujet" name="sujet"
+                type="text"
+                placeholder="Collaboration, question..."
+                aria-invalid="false"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">
+                Message
+                <span class="label-meta" aria-live="polite">(<span id="restant">280</span> car. restants)</span>
+              </label>
+              <textarea
+                id="message" name="message"
+                rows="6"
+                maxlength="280"
+                placeholder="Bonjour Florian, je souhaite..."
+                aria-describedby="help-msg"
+                aria-invalid="false"
+              ></textarea>
+              <p id="help-msg" class="muted">280 caractères maximum.</p>
+            </div>
+
+            <button class="btn btn-primary btn-full" type="submit">
+              <span class="btn-text">Envoyer le message ✉️</span>
+              <span class="btn-loading" aria-hidden="true" hidden>Envoi en cours…</span>
+            </button>
+
+            <!-- Message de succès (affiché par JS après envoi Formspree) -->
+            <div id="form-success" class="form-success" hidden role="alert" aria-live="polite">
+              ✅ Message envoyé ! Je vous répondrai dès que possible.
+            </div>
+            <div id="form-error" class="form-error" hidden role="alert" aria-live="polite">
+              ❌ Une erreur est survenue. Réessayez ou écrivez-moi directement.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo">F<span style="color:var(--accent)">.</span></span>
+      <small>© <span id="annee"></span> Florian DE COURTEMANCHE — BUT MMI</small>
+      <div class="footer-links">
+        <a href="projets.html">Projets</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

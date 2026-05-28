@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio de Florian DE COURTEMANCHE, étudiant en BUT MMI.">
+  <title>Florian DC — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Florian DC - Accueil">
+      <span class="logo-init">F</span><span class="logo-dot">.</span>
+    </a>
+
+    <button id="burger" class="burger-btn" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+    </button>
+
+    <nav id="nav" class="main-nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="nav-close" class="nav-close" aria-label="Fermer le menu">✕</button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <label class="theme-toggle" title="Changer le thème">
+      <input type="checkbox" id="themeToggle" aria-label="Activer le thème sombre">
+      <span class="toggle-track">
+        <span class="toggle-icon">☀️</span>
+        <span class="toggle-icon">🌙</span>
+        <span class="toggle-thumb"></span>
+      </span>
+    </label>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="hero-eyebrow">BUT Métiers du Multimédia et de l'Internet</p>
+        <h1 id="hero-title">
+          <span class="hero-name">Florian</span><br>
+          <span class="hero-name accent">De Courtemanche</span>
+        </h1>
+        <p class="hero-desc">Étudiant en MMI passionné par le design, le montage et la création numérique. Je construis des expériences visuelles qui marquent les esprits.</p>
+        <div class="hero-cta">
+          <a href="projets.html" class="btn btn-primary">Voir mes projets →</a>
+          <a href="contact.html" class="btn btn-ghost">Me contacter</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-img-frame">
+          <img src="img/mooi.jpeg" alt="Portrait de Florian DE COURTEMANCHE" width="320" height="380">
+          <div class="hero-img-decoration"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section id="apropos" class="section-apropos" aria-labelledby="titre-apropos">
+      <div class="section-label">À propos</div>
+      <h2 id="titre-apropos">Un créatif curieux,<br>basé en Guadeloupe</h2>
+      <div class="apropos-grid">
+        <p>J'ai 18 ans et j'habite à Gourbeyre. L'univers du numérique me passionne sous toutes ses formes : design graphique, montage vidéo, développement web… Je suis quelqu'un de sérieux, sociable et persévérant. Mon objectif est de trouver ma voie dans le milieu du numérique.</p>
+        <div class="skills-block">
+          <h3>Compétences</h3>
+          <ul class="skills-list">
+            <li><span class="skill-tag">HTML / CSS</span></li>
+            <li><span class="skill-tag">Design (Canva)</span></li>
+            <li><span class="skill-tag">Montage (CapCut)</span></li>
+            <li><span class="skill-tag">Blender</span></li>
+            <li><span class="skill-tag">Animation</span></li>
+            <li><span class="skill-tag">Photographie</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETS APERÇU -->
+    <section class="section-projets-preview" aria-labelledby="titre-projets-preview">
+      <div class="section-label">Réalisations</div>
+      <div class="preview-header">
+        <h2 id="titre-projets-preview">Mes derniers projets</h2>
+        <a href="projets.html" class="btn btn-ghost">Tout voir →</a>
+      </div>
+      <div class="projets-preview-grid">
+        <article class="preview-card" style="--delay:0s">
+          <img src="img/FH.png" alt="Logo FH" loading="lazy">
+          <div class="preview-card-body">
+            <span class="preview-tag">Design</span>
+            <h3>Création de logos</h3>
+          </div>
+        </article>
+        <article class="preview-card" style="--delay:.07s">
+          <img src="img/siite.png" alt="Site web" loading="lazy">
+          <div class="preview-card-body">
+            <span class="preview-tag">Code</span>
+            <h3>Création de sites</h3>
+          </div>
+        </article>
+        <article class="preview-card" style="--delay:.14s">
+          <img src="img/Activi.png" alt="Activités" loading="lazy">
+          <div class="preview-card-body">
+            <span class="preview-tag">Design</span>
+            <h3>Activités nautiques</h3>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo">F<span style="color:var(--accent)">.</span></span>
+      <small>© <span id="annee"></span> Florian DE COURTEMANCHE — BUT MMI</small>
+      <div class="footer-links">
+        <a href="projets.html">Projets</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

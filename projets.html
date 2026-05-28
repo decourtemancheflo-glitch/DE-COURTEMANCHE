@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projets de Florian DE COURTEMANCHE.">
+  <title>Projets — Florian DC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Florian DC - Accueil">
+      <span class="logo-init">F</span><span class="logo-dot">.</span>
+    </a>
+    <button id="burger" class="burger-btn" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+    </button>
+    <nav id="nav" class="main-nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projets.html" aria-current="page">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="nav-close" class="nav-close" aria-label="Fermer le menu">✕</button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <label class="theme-toggle" title="Changer le thème">
+      <input type="checkbox" id="themeToggle" aria-label="Activer le thème sombre">
+      <span class="toggle-track">
+        <span class="toggle-icon">☀️</span>
+        <span class="toggle-icon">🌙</span>
+        <span class="toggle-thumb"></span>
+      </span>
+    </label>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <ol>
+          <li><a href="index.html">Accueil</a></li>
+          <li aria-current="page">Projets</li>
+        </ol>
+      </nav>
+      <h1>Mes <span class="accent">projets</span></h1>
+      <p class="page-hero-desc">Un aperçu de mes réalisations en design, développement et création visuelle.</p>
+    </div>
+
+    <section class="projets-section" aria-label="Liste des projets">
+      <div id="liste-projets" class="grille-projets">
+
+        <article class="carte" data-tag="design">
+          <div class="carte-img-wrap">
+            <img src="img/FH.png" alt="Logo FH" loading="lazy">
+            <span class="carte-tag">Design</span>
+          </div>
+          <div class="carte-body">
+            <h3>Création de logos</h3>
+            <p>Conception d'identités visuelles, dont ce logo FH avec un symbole de géolocalisation intégré.</p>
+            <p class="meta">Design • 2025</p>
+            <a class="btn btn-primary" href="#">Voir →</a>
+          </div>
+        </article>
+
+        <article class="carte" data-tag="code">
+          <div class="carte-img-wrap">
+            <img src="img/siite.png" alt="Site Pêche en Guadeloupe" loading="lazy">
+            <span class="carte-tag">Code</span>
+          </div>
+          <div class="carte-body">
+            <h3>Sites web</h3>
+            <p>Création de sites web responsives avec navigation, dark mode et mise en page soignée.</p>
+            <p class="meta">Code • 2025</p>
+            <a class="btn btn-primary" href="#">Voir →</a>
+          </div>
+        </article>
+
+        <article class="carte" data-tag="design">
+          <div class="carte-img-wrap">
+            <img src="img/Activi.png" alt="Activités nautiques" loading="lazy">
+            <span class="carte-tag">Design</span>
+          </div>
+          <div class="carte-body">
+            <h3>Montage photoshop</h3>
+            <p>Landing page pour des activités nautiques en Guadeloupe, design immersif sur fond océan.</p>
+            <p class="meta">Code • 2025</p>
+            <a class="btn btn-primary" href="#">Voir →</a>
+          </div>
+        </article>
+
+        <article class="carte" data-tag="design">
+          <div class="carte-img-wrap">
+            <img src="img/afii.png" alt="Affiche Photomancie" loading="lazy">
+            <span class="carte-tag">Affiche</span>
+          </div>
+          <div class="carte-body">
+            <h3>Création d'affiches</h3>
+            <p>Réalisation d'affiches événementielles, dont la clôture JPO du groupe audiovisuel MMI.</p>
+            <p class="meta">Design • 2025</p>
+            <a class="btn btn-primary" href="#">Voir →</a>
+          </div>
+        </article>
+
+         <article class="carte" data-tag="design">
+          <div class="carte-img-wrap">
+            <img src="img/afii.png" alt="Affiche Photomancie" loading="lazy">
+            <span class="carte-tag">Affiche</span>
+          </div>
+          <div class="carte-body">
+            <h3>Création de posts instagram</h3>
+            <p>Réalisation de posts instagram pour un projet (The Sillies).</p>
+            <p class="meta">Design • 2025</p>
+            <a class="btn btn-primary" href="#">Voir →</a>
+          </div>
+        </article>
+
+         <article class="carte" data-tag="design">
+          <div class="carte-img-wrap">
+            <img src="img/Kiki.pdf" alt="Affiche Photomancie" loading="lazy">
+            <img src="img/Kiki.pdf" alt="Affiche Photomancie" loading="lazy">
+            <span class="carte-tag">Affiche</span>
+          </div>
+          <div class="carte-body">
+            <h3>Création d'une affiche promotionnelle fictif</h3>
+            <p>Réalisation d'une affiche promotionnelle fictif<br>, dont la clôture JPO du groupe audiovisuel MMI.</p>
+            <p class="meta">Design • 2025</p>
+            <a class="btn btn-primary" href="#">Voir →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo">F<span style="color:var(--accent)">.</span></span>
+      <small>© <span id="annee"></span> Florian DE COURTEMANCHE — BUT MMI</small>
+      <div class="footer-links">
+        <a href="projets.html">Projets</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
